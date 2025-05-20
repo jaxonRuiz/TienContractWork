@@ -1,0 +1,48 @@
+Start:
+[0-376] "What the...?"
+[0-86] "Hi!"
+[0-376] "..."
+[0-376] "It's unlike you to be here at this time 0-86, and breaking protocol at that. Did something happen?"
+[0-86] "I found this... it talks about the world above!"
+"0-376's optics dim. Their frame emits a brief flicker of static before turning away."
+[0-376] "You shouldn't be concerned about it 0-86. It's nothing important."
+[0-376] "It's noise. Residual data. Nothing changes."
+[0-376] "You can incinerate it here and go back to your position."
+- "Query: Clarify Input" -> clarify_input
+- "Persist: Audio Signature" -> persist
+--
+
+clarify_input:
+[0-86] "Please? I am just requesting context for the unknown data!"
+"0-376's posture stiffens. They do not look back"
+[0-376] "It really isn't something you should concern youself with 0-86, as it is nothing important"
+[0-376] "Fairly simple really"
+- "So what am I supposed to do then?" -> assign_task
+--
+
+persist:
+[0-86] "The recording, it-"
+[0-376] "0-86..."
+[0-376] "Surface signals are relics. Not meant for us. Never were."
+"Their vocalizer lowers slightly. There's a flicker of hesitation, quickly overwritten by system tone."
+[LOG] "Continued resistance from unit 0-376."
+[LOG] "Internal variable - CURIOSITY increasing."
+- "So what am I supposed to do then?" -> assign_task
+--
+
+assign_task:
+"0-376 halts. Frame joints lock into place, a low hum building from within."
+"They pivot. Voice clipped, mechanical."
+
+"0-376" How about this?
+
+"They gesture to the furnace corridor. A radiant heat rolls over the space."
+
+[0-376] "The incinerator shaft along these corridors are leaking. The sealant is overdue for retrieval from storage."
+[0-376] "I’m still waiting on 0-250 and 0-141 to bring the RS-07 compound to me so that it can be fixed."
+[0-376] "Why don’t you check up on them and bring the compound to me?"
+
+[LOG] "TASK_RECEIVED -  Refractory Sealant.
+Objective: Recover RS-07 for containment repair.
+Condition: Hazard navigation likely."
+--

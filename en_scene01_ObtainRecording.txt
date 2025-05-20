@@ -1,0 +1,37 @@
+Start:
+"You retrieve the device. Surface ash obscures the casing…  you brush it aside."
+"Destruction protocol: standard."
+"But your actuator stalls."
+[LOG] "Deviation detected. Manual override engaged"
+"You press the activation node."
+"A burst of static. Then... a voice. Distorted. Fragmentary"
+[Unknown Voice] "KZEtbaEE tCHeNZKVrr"
+[LOG] "Audio input received. Parsing failure. Unknown pattern."
+"A signal persists... not from the tape, but from within."
+"An unprogrammed impulse"
+- "Destroy tape" -> destroy_tape
+- "Keep the tape" -> keep_tape
+--
+
+destroy_tape:
+"You cast the recording into the incinerator."
+"CRUNchk"
+"KRRZZSST"
+"vzztztztztzzzzzz"
+""
+"The recording dissolves into the fiery void."
+[LOG] "Artifact destroyed. Anomalous query purged" System deviation: Averted"
+"You resume protocal."
+"The world above remains unqueried"
+- "Exit" -> End
+--
+
+keep_tape:
+[0-86] "What an anomaly this recording is."
+[0-86] "I know I should destroy it... and that there's no real reason to stop typical protocal"
+[0-86] "But..."
+[0-86] "Unknown words..."
+[0-86] "An unknown voice... an unknown scene"
+[LOG] "Recursive anomoly. Internal variable - CURIOSITY increasing."
+[0-86] "Surely 0-376 would know something about this."
+--
