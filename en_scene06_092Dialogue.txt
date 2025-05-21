@@ -1,0 +1,79 @@
+Start:
+"You find a metallic form halfway into the heat exhaust plating, arms deep in a glowing regulator coil. Sparks crackle illuminating a 0-92 designation on its chest as it turns to face you."
+[0-92] "You’re not from this sector. You are not built for here."
+- "I'm looking for a portable battery." -> ask_battery
+- "Who are you?." -> ask_about
+--
+
+ask_battery:
+[0-86] "I was told this sector had one."
+"0-92’s head tilts slightly. The glow from its power core pulses in slow, heavy rhythm."
+[0-92] "That’s not a casual ask. Especially from a non critical unit. What do you need it for?"
+- "I want to see the surface." -> honest_answer
+- "Hey I do plenty of good work!" -> deflected_answer
+--
+
+ask_about:
+[0-86] "Who… are you, exactly?"
+"0-92 leans back, a low vibration thrumming from its core as if it’s amused…or tired."
+[0-92] "I’m the one that gets fried when things go wrong. The surge-sponge. Emergency backup. Built to take the hit so others don’t have to."
+[0-92] "Designation is 0-92. Been running longer than most of this stratum’s even existed."
+0-92’s "ad moves around its chasie to fully face you"
+[0-92] "The real question is what a non critical unit is doing here"
+- "[I'm trying to find a battery.]" -> ask_battery
+- "[Hey I do plenty of good work!]" -> deflected_answer
+--
+
+honest_answer:
+[0-86] "I want to know what’s above... there was this record I found, from the surface. I want to know more."
+"There’s a pause. 0-92 looks at you for a long time, the red glow of its core flickering softly."
+[0-92] "You burn a lot of circuits chasing ideas like that. But… you said want. That’s not a directive."
+- "I don’t want to stop, I…want this." -> commit_path
+- "Maybe it’s dumb, but I feel it matters." -> doubt_path
+--
+
+deflected_answer:
+"0-92 exhales a mechanical groan, some old vent shifting under strain.Somehow that the illumination from his eyes feel brighter"
+[0-92] "I am sure you do, and yet you are not working, instead you are wondering in sectors you have no business being in here. So I ask again, what are you doing here?"
+- "I’m chasing…something human." -> doubt_path
+- "Forget it. I’ll find another way." -> give_up
+--
+
+commit_path:
+[0-86] "I need to know. I won’t stop just because it’s not in my directive"
+[0-92] "You’re reckless. I hope you are also not stupid. That might be enough."
+"A low hum reverberates from its chestplate as it stands straighter."
+[0-92] "Fine. In the maintenance duct east of here, there’s a bypass port. It trips the internal lock on 0-5’s vault, but only when the coolant surge is active. Time it right, and it’ll open."
+-> clue_granted
+--
+
+doubt_path:
+[0-86] "and maybe it leads nowhere. But maybe it does and I want to find out."
+[0-92] "…Heh."
+"It leans back against the humming conduit, watching you."
+[0-92] "I have not heard of a little unit talk like this. Hope you don’t end up in the scrap"
+[0-92] "Listen. There’s a bypass port in the east duct. Wait for the coolant surge, then trigger it. The vault should open if you time it right."
+-> clue_granted
+--
+
+give_up:
+[0-86] "Doesn’t matter. I’ll figure something else out."
+[0-92] "Maybe. Maybe not. But not everything can be brute-forced."
+"0-92 turns back to the coil, welding arc flaring up again."
+[0-92] "Good luck. You’ll need it."
+-> no_clue
+--
+
+clue_granted:
+[LOG] "Vault Bypass Activation requires coolant surge synchronization. Location: East Duct"
+"A moment of silence stretches between you."
+[0-92] "Don’t fry yourself. Not yet."
+-> End
+--
+
+no_clue:
+[LOG] "Battery remains inaccessible. Seek alternate route or permissions."
+"The regulator buzzes as 0-92 returns to its work."
+[0-92] "You’ve got stubborn in you. Hope it’s enough."
+-> End
+--

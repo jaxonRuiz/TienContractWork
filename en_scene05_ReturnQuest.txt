@@ -1,0 +1,65 @@
+Start:
+"You return to 0-376, your circuits humming with quiet satisfaction from making it back with time to spare."
+[0-376] “The repair crew mentioned that they were not expecting the obstruction to be cleared for another few hours, how did you make it back so quickly?"
+- "Worked around it" -> return_convo1
+--
+
+return_convo1:
+[0-86] "It was hard, but I managed to figure something out."
+[0-376] "Figure...?"
+“There is a moment of silence between the two. Despite the lack of expression on the chassis of 0-376, there seems to be a change in the air,a moment of silence, concern mixed with annoyance."
+- "Ask About The Recording" -> ask_again
+- "Check The Recording" -> investigate
+--
+
+ask_again:
+[0-86] "I wanted to talk about the recording..."
+[0-376] "Forget it."
+"The recording crackles stubbornly in your storage compartment, its persistence mirroring your own."
+- "Persist" -> press_376
+--
+
+investigate:
+"You look down to the recording, still in hand,  your auditory sensors straining as the voice whispers: '***** *** b****'"
+"The voice shifts, its foreign edges softening like wax under flame."
+"Your circuits buzz with undirected purpose, each pulse layering new complexity into your core."
+[0-376] "This is not your directive." 
+"The mystery coils tighter, an inescapable…something, a pull to an unsolvable want"
+- "Approach 0-376" -> press_376
+--
+
+press_376:
+"You approach 0-376, your frame steady with quiet determination."
+"0-376 does not turn, their tools scraping against metal in rhythmic dismissal."
+[0-376] "You finished your tasks. Priority defers to more incinerator duty. Forget the tape." 
+- "Persist" -> challenge_376
+- "Leave" -> End
+--
+
+challenge_376:
+[0-86] "I need to understand. What’s above us, 0-376? What is this tape?" 
+"A silence stretches, thick and heavy, before their voice drops with an authority not often exercised."
+[0-376] "Above? Only more layers. More work. Work assigned to different units" 
+[0-86] "But it talked about the surface, we haven’t heard anything from the humans above in…" 
+[0-376] "It is a distraction. You have work to continue" 
+"Their tone sharpens, a door sliding shut."
+- "Refuse to back down" -> revelation
+--
+
+revelation:
+"You stand firm, an unfamiliar pressure building in your core—a spark refusing to be smothered."
+[0-86] "I…I want to know. I feel like there is a gate that has been opened and I cannot close it. I have to go up" 
+"0-376 stutters, their scarred faceplate tilting as a sigh hums from their depths."
+[0-376] "Wanting and doing are scrap heaps apart." 
+[0-86] "Then…I will find a way to get there" 
+"Another silence. The air thrums with static."
+[0-376] "......If you're so determined to fry your circuits, you’ll need power. A portable battery. Only 0-5, the layer manager, in the Energy section has them." 
+"0-376 turns away from you. The clang of metal fills the silence as 0-376 works, avoiding your gaze."
+[0-376] "...take this keycard, it is for the elevator. You should not be doing this but... be careful." 
+"There's something almost proud in the way they refuse to look at you as they hand it over."
+[0-86] "...thank you."
+[LOG] "TASK_RECEIVED: Portable Battery.
+Objective: Acquire a portable battery unit from 0-5.
+Condition: Approval to leave section needed. Status: granted."
+- "Leave" -> End
+–-

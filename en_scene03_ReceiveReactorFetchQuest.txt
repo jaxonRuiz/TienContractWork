@@ -17,3 +17,13 @@ Start:
 [0-86] "Standard procedures only have verified efficacy at-"
 [0-141] "I believe at this stage we require a unit with supervisory permissions to prevent full malfunction."
 [0-141] "Although…"
+"Both 0-250 and 0-141 turn to look at you"
+[0-141] "Unit 0-376 logs frequent data interactions with you."
+[0-141] "Their directives extend beyond standard parameters."
+[0-141] "You are... often instructed by them. More than we are."
+[0-141] "While you lack supervisory permissions, your aquired data may be sufficient."
+[0-141] "Do you believe you can execute a functional correction?"
+[0-86] "I suppose it doesn't hurt to try."
+[LOG] "Unauthorized repair attempt initiated
+Internal variable: CURIOSITY increasing."
+--
