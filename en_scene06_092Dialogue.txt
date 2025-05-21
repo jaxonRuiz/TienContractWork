@@ -20,8 +20,8 @@ ask_about:
 [0-92] "Designation is 0-92. Been running longer than most of this stratum’s even existed."
 0-92’s "ad moves around its chasie to fully face you"
 [0-92] "The real question is what a non critical unit is doing here"
-- "[I'm trying to find a battery.]" -> ask_battery
-- "[Hey I do plenty of good work!]" -> deflected_answer
+- "I'm trying to find a battery." -> ask_battery
+- "Hey I do plenty of good work!" -> deflected_answer
 --
 
 honest_answer:
@@ -44,7 +44,7 @@ commit_path:
 [0-92] "You’re reckless. I hope you are also not stupid. That might be enough."
 "A low hum reverberates from its chestplate as it stands straighter."
 [0-92] "Fine. In the maintenance duct east of here, there’s a bypass port. It trips the internal lock on 0-5’s vault, but only when the coolant surge is active. Time it right, and it’ll open."
--> clue_granted
+"Thanks" -> clue_granted
 --
 
 doubt_path:
@@ -53,7 +53,7 @@ doubt_path:
 "It leans back against the humming conduit, watching you."
 [0-92] "I have not heard of a little unit talk like this. Hope you don’t end up in the scrap"
 [0-92] "Listen. There’s a bypass port in the east duct. Wait for the coolant surge, then trigger it. The vault should open if you time it right."
--> clue_granted
+"Thanks" -> clue_granted
 --
 
 give_up:
@@ -61,19 +61,19 @@ give_up:
 [0-92] "Maybe. Maybe not. But not everything can be brute-forced."
 "0-92 turns back to the coil, welding arc flaring up again."
 [0-92] "Good luck. You’ll need it."
--> no_clue
+"Hmph"-> no_clue
 --
 
 clue_granted:
 [LOG] "Vault Bypass Activation requires coolant surge synchronization. Location: East Duct"
 "A moment of silence stretches between you."
 [0-92] "Don’t fry yourself. Not yet."
--> End
+"I'll try" -> End
 --
 
 no_clue:
 [LOG] "Battery remains inaccessible. Seek alternate route or permissions."
 "The regulator buzzes as 0-92 returns to its work."
 [0-92] "You’ve got stubborn in you. Hope it’s enough."
--> End
+"Thanks, bye" -> End
 --
